@@ -1,0 +1,45 @@
+<html>
+    <head></head>
+    <body>
+        <ul id="parent-list">
+            <li id="post-1">Item 1</li>
+            <li id="post-2">Item 2</li>
+            <li id="post-3">Item 3</li>
+            <li id="post-4">Item 4</li>
+            <li id="post-5">Item 5</li>
+            <li id="post-6">Item 6</li>
+
+        </ul>
+
+
+        <div id='myDiv'>
+            <a class="classA">dsd</a>
+            <a class="classA">dasd</a>
+            <a class="classB">dsd</a>
+            <a class="classC">dsd</a>
+            <a class="classD">dsd</a>
+            <a class="classE">dsd</a>
+            
+        </div>
+        <script>
+            /**
+            Neste exemplo usamos uma ul com uma lista
+            document.getElementById('parent-list').addEventListener('click',function(e){
+                if(e.target && e.target.nodeName =='LI'){
+                    console.log('item da lista',e.target.id.replace('post-',''),'was clicked');
+                }
+            })
+
+             */
+
+             
+            // Obtenha o DIV pai, adicione o ouvinte de clique ... 
+             document.getElementById('myDiv').addEventListener('click',function(e){
+                 if (e.target && e.target.matches('a.classA')){
+                    console.log('Anchor element clicked!');
+                 }
+             })
+
+        </script>
+    </body>
+</html>

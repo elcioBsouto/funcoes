@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Function library example</title>
+  <style>
+    input {
+      font-size: 2em;
+      margin: 10px 1px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <input class="numberInput" type="text">
+  <p></p>
+
+  <script>
+    const input = document.querySelector('.numberInput');
+    const para = document.querySelector('p');
+
+    function squared(num){
+        return num * num;
+    }
+
+    function cubed (num){
+        return num * num * num ;
+    }
+
+    function factorial(num){
+        let x = num;
+        while (x > 1){
+            x--;
+        }
+        return num;
+    }
+
+    
+
+    function circuferencia(num){
+        let raio = Math.PI * (num *num);
+        return raio;
+    }
+
+    input.onchange =  function(){
+        let num = input.value;
+        if(isNaN( num)){
+            para.textContent = 'Deve ser um Numero';
+        }else {
+            para.textContent = num + ' quadrado sera: '+squared(num)+'.'+
+                               num + ' cubo sera: '  +cubed(num)+'.'+
+                               num + ' factorial sera: '+factorial(num)+'.'+
+                               num + ' raio sera: '+circuferencia(num)+'.';
+        }
+    }
+
+  </script>
+</body>
+</html>
